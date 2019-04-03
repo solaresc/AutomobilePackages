@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="AutomobilePackages">
+  <ClassDiagramComponents>
+    <Class name="NorthAmerica" package="" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="createBundle" returnType="Car" visibility="package">
+          <Argument type="String" name="item"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TestCarFactory" package="" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AsianLuxury" package="" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="AsianPerformance" package="" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Europe" package="" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="createBundle" returnType="Car" visibility="package">
+          <Argument type="String" name="item"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CarFactory" package="" visibility="public" isAbstract="true" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="createBundle" returnType="Car" visibility="package" isAbstract="true">
+          <Argument type="String" name="item"/>
+        </Method>
+        <Method name="orderBundle" returnType="Car" visibility="public">
+          <Argument type="String" name="type"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="NorthAmericanPerformance" package="" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="EuropeanLuxury" package="" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="NorthAmericanLuxury" package="" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Car" package="" visibility="public" isAbstract="true" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="bundle" type="String" visibility="package"/>
+        <Field name="make" type="String" visibility="package"/>
+        <Field name="model" type="String" visibility="package"/>
+        <Field name="carSpecs" type="ArrayList" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Asia" package="" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="createBundle" returnType="Car" visibility="package">
+          <Argument type="String" name="item"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="EuropeanPerformance" package="" visibility="public" xPosition="920.0" yPosition="420.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="EuropeanPerformance" target="Car"/>
+    <IsRelation name="is" source="NorthAmerica" target="CarFactory"/>
+    <IsRelation name="is" source="EuropeanLuxury" target="Car"/>
+    <IsRelation name="is" source="Europe" target="CarFactory"/>
+    <UseRelation source="Europe" target="Car" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Asia" target="Car" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="NorthAmerica" target="Car" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="AsianLuxury" target="Car"/>
+    <IsRelation name="is" source="NorthAmericanPerformance" target="Car"/>
+    <IsRelation name="is" source="AsianPerformance" target="Car"/>
+    <IsRelation name="is" source="Asia" target="CarFactory"/>
+    <UseRelation source="CarFactory" target="Car" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="NorthAmericanLuxury" target="Car"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
